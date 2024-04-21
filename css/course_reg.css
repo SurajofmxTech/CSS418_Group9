@@ -1,0 +1,527 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: poppins, calibri;
+	scroll-behavior: smooth;
+}
+
+body{
+	background: linear-gradient(180deg, purple 40%, aliceblue 0%);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.navigation{
+		position: fixed;
+		top: 10px;
+		left: 10px;
+		color: aliceblue;
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		/* z-index: 20; */
+
+		.logo{
+			display: flex;
+			align-items: center;
+			height: 50px;
+			padding: .4rem .5rem;
+			border-radius: 5px;
+		}
+		.logo div:first-child{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 4rem;
+		}
+		.logo div:nth-child(2){
+			line-height: .9em;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			font-size: .7rem;
+			text-transform: capitalize;
+		}
+		.logo div:last-child{
+			content: "";
+			position: absolute;
+			left: 50px;
+			padding: 1rem;
+			width: 1rem;
+			height: 1rem;
+			background: linear-gradient(49deg, aliceblue 20%, transparent 0);
+			transform: rotate(-140deg);
+			box-shadow: inset 0 0 5px;
+		}
+
+		.reset{
+			fill: aliceblue;
+			padding: .4rem;
+			margin-inline: .5rem;
+			cursor: pointer;
+			position: relative;
+		}
+		.reset:hover{
+			opacity: .8;
+		}
+		.reset:hover::before{
+			content: "Reset";
+			position: absolute;
+			right: 5px;
+			bottom: -18px;
+			font-size: .6rem;
+			background: aliceblue;
+			color: #333;
+			padding: .2rem .3rem;
+			border-radius: 2px;
+			opacity: 1;
+		}
+
+
+	}
+
+	.main_body::-webkit-scrollbar{
+		width: 7px;
+		height: 7px;
+	}
+	.main_body::-webkit-scrollbar-thumb{
+		border-radius: 1vh;
+		background: purple;
+	}
+	.main_body{
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		/* max-width: 160vh; */
+		width: fit-content;
+		width: 90%;
+		height: 90%;
+		/* box-shadow: 0 0px 3px #a0a0a0; */
+		backdrop-filter: blur(10px);
+		border-radius: 8px;
+		padding: .3rem;
+		overflow: auto;
+		z-index: 2;
+
+		/* courseReg_page */
+		.courseReg_page::-webkit-scrollbar{
+			width: 7px;
+			height: 7px;
+		}
+		.courseReg_page::-webkit-scrollbar-thumb{
+			background: purple;
+			border-radius: 1vh;
+		}
+		.courseReg_page{
+			flex: 1;
+			width: fit-content;
+			min-width: 57vh;
+			height: 100%;
+			background: aliceblue;
+			padding: 0.3rem;
+			box-shadow: 0 0px 3px #a0a0a0;
+			color: #333;
+			overflow: auto;
+
+			.header{
+				margin: 2rem auto;
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				font-weight: bold;
+				text-transform: uppercase;
+				font-size: .9rem;
+				.text{
+					flex: 1;
+					display: flex;
+					align-items: center;
+					flex-direction: column;
+				}
+				.content{
+					width: 90%;
+					display: flex;
+					align-items: flex-end;
+					.studentDetails{
+						flex: 1;
+						display: flex;
+						flex-direction: column;
+						font-size: .75rem;
+						.table{
+							display: flex;
+						}
+					}
+					.passport{
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						text-align: center;
+						border: 1px solid;
+						width: 120px;
+						height: 120px;
+						border-radius: 10px;
+						overflow: hidden;
+						font-size: smaller;
+						text-transform: capitalize;
+					}
+					.passport img{
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+			.firstSem_list,
+			.secondSem_list{
+				margin: auto;
+				margin-bottom: 2rem;
+				width: 90%;
+				.session{
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					font-weight: 500;
+					text-transform: capitalize;
+					font-size: .9rem;
+				}
+				.table{
+					width: 100%;
+					margin-top: 2rem;
+					overflow: hidden;
+					border-radius: 1rem;
+					box-shadow: 0 0 5px purple48;
+					border-collapse: collapse;
+				}
+				.table thead tr{
+					text-transform: uppercase;
+					line-height: 1em;
+					text-align: left;
+					font-size: .7rem;
+					user-select: none;
+				}
+				.table thead th{
+					background: purple;
+					padding-block: 1rem;
+					color: aliceblue;
+					padding-inline: .4rem;
+					border-right: solid;
+				}
+				.table thead th:last-child{
+					border: 0;
+				}
+				.table tbody tr{
+					cursor: pointer;
+					user-select: none;
+					/* border-bottom: 2px solid #555; */
+				}
+				.table tbody tr:hover{
+					border-top: 1px solid purple49;
+					border-bottom: 1px solid purple49;
+					background: #e1ebf4;
+					transition: .3s ease;
+				}
+				.table tbody tr td:first-child{
+					display: none;
+					text-align: center;
+				}
+				.table tbody tr td{
+					padding: .7rem;
+					font-size: .75rem;
+				}
+				.total_unit{
+					font-size: .8rem;
+					text-transform: capitalize;
+					font-weight: 500;
+					text-align: center;
+					margin-top: 1rem;
+				}
+			}
+			.validation{
+				display: flex;
+				justify-content: space-evenly;
+				align-items: center;
+				font-size: .8rem;
+
+				.box{
+					user-select: none;
+					cursor: pointer;
+					display: flex;
+					gap: 5px;
+				}
+				.box input{
+					opacity: .5;
+				}
+				.box label{
+					cursor: pointer;
+				}
+				.box.active label.name{
+					font-weight: 500;
+					display: flex;
+					align-items: center;
+					flex-direction: column;
+				}
+				.box.active{
+					display: flex;
+					align-items: flex-start;
+				}
+				.box.active label::after{
+					content: "validated";
+					opacity: .7;
+
+				}
+				.box:hover label{
+					font-weight: 500;
+				}
+			}
+			.printBtn{
+				margin-block: 2rem;
+				display: flex;
+				justify-content: center;
+				gap: 20px;
+				padding-inline: 5rem;
+				#home{
+					flex: 1;
+					padding: .3rem;
+					border-radius: 10px;
+					text-transform: capitalize;
+					font-weight: 600;
+					background: transparent;
+					outline: none;
+					border: 2px solid purple;
+					color: purple;
+					cursor: pointer;
+				}
+				#home:hover{
+					background: purple;
+					color: aliceblue;
+				}
+				#printBtn{
+					flex: 1;
+					outline: none;
+					border: 0;
+					background: purple;
+					color: aliceblue;
+					padding: .3rem;
+					border-radius: 10px;
+					text-transform: capitalize;
+					font-weight: 600;
+					cursor: pointer;
+				}
+				#printBtn:hover{
+					opacity: .9;
+				}
+			}
+		}
+
+		.container::-webkit-scrollbar{
+			width: 7px;
+			height: 7px;
+			box-shadow: 0 0 4px ;
+		}
+		.container::-webkit-scrollbar-thumb{
+			border-radius: 1vh;
+			background: purple;
+		}
+		.container{
+			display: flex;
+			flex-direction: column;
+			background: aliceblue;
+			max-width: 150vh;
+			width: fit-content;
+			flex: 1;
+			min-width: 57vh;
+			height: 100%;
+			box-shadow: 0 0px 3px #a0a0a0;
+			/* border-radius: 8px; */
+			padding: .3rem;
+			overflow: auto;
+
+
+			/* navigation */
+			.nav{
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				background: purple;
+				padding: 0rem 1rem;
+				border-radius: 8px;
+				color: aliceblue;
+				fill: aliceblue;
+				padding: .7rem .5rem;
+
+				.path{
+					display: flex;
+					align-items: center;
+					gap: 5px;
+					opacity: .7;
+					.root{
+						display: flex;
+					}
+				}
+			}
+			.register-box{
+				flex: 1;
+				width: 90%;
+				margin: 2rem auto;
+				display: flex;
+				flex-direction: column;
+				gap: 40px;
+				.content{
+					width: 70%;
+					height: 100px;
+					margin: 0 auto;
+					display: flex;
+					flex-direction: column;
+					border: 2px solid purple;
+					border-radius: 10px;
+					overflow: hidden;
+
+					.head{
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						background: purple;
+						color: aliceblue;
+						fill: aliceblue;
+						padding: .5rem;
+
+						.title{
+							text-transform: capitalize;
+						}
+						.icons{
+							display: flex;
+							gap: 15px;
+							.icon{
+								display: flex;
+								cursor: pointer;
+							}
+						}
+					}
+					.body{
+						flex: 1;
+						background: #fff;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						.select_session{
+							width: 80%;
+							display: flex;
+							align-items: center;
+							gap: 10px;
+							.name{
+								text-transform: capitalize;
+								font-weight: 500;
+								color: #444;
+							}
+							#session{
+								flex: 1;
+								cursor: pointer;
+								padding: .3rem;
+								background: aliceblue;
+								border-radius: 7px;
+								border: 0;
+								box-shadow: 0 0 4px purple49;
+								font-weight: 300;
+								font-size: .8rem;
+								outline: purple solid;
+							}
+							#session:focus{
+								box-shadow: 0 0 10px purple;
+							}
+
+							.submit{
+								text-transform: capitalize;
+								padding: .4rem;
+								border-radius: 7px;
+								outline: none;
+								border: 0;
+								font-weight: 600;
+								color: aliceblue;
+								background: purple;
+								cursor: pointer;
+							}
+							.submit:hover{
+								background: purplee0;
+							}
+						}
+					}
+				}
+
+				.course_list{
+					color: #444;
+					.title{
+						text-transform: capitalize;
+						font-weight: 500;
+						font-size: 1.5rem;
+						text-align: center;
+					}
+					.title_2{
+						text-align: center;
+						font-weight: 500;
+						text-transform: capitalize;
+						line-height: .1em;
+					}
+					.courses{
+						width: 100%;
+						margin-top: 2rem;
+						overflow: hidden;
+						border-radius: 1rem;
+						box-shadow: 0 0 5px purple48;
+						border-collapse: collapse;
+						display: none;
+					}
+					.courses.active{
+						display: table;
+					}
+					.courses thead tr{
+						text-transform: uppercase;
+						line-height: 1em;
+						text-align: left;
+						font-size: .75rem;
+						user-select: none;
+						letter-spacing: .05em;
+					}
+					.courses thead th{
+						background: purple;
+						padding-block: 1rem;
+						color: aliceblue;
+						padding-inline: .4rem;
+						border-right: solid;
+					}
+					.courses thead th:last-child{
+						border: 0;
+					}
+					.courses tbody tr{
+						cursor: pointer;
+						user-select: none;
+					}
+					.courses tbody tr:hover{
+						border-top: 1px solid purple49;
+						border-bottom: 1px solid purple49;
+						background: #e1ebf4;
+						transition: .3s ease;
+					}
+					.courses tbody tr td:first-child{
+						text-align: center;
+					}
+					.courses tbody tr td{
+						padding: .7rem;
+						font-size: .75rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media print {
+	.main_body{
+		height: 100%;
+		.container{
+			display: none;
+		}
+	}
+}

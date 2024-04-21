@@ -1,0 +1,362 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Course Registration</title>
+
+		<link rel="stylesheet" href="css/course_reg.css">
+	</head>
+	<body>
+		<nav class="navigation">
+		</nav>
+
+		<div class="main_body">
+			<div class="courseReg_page">
+				<header class="header">
+					<div class="text">
+						<span class="title">federal university of technology</span>
+						<span class="dpt">cyber security science</span>
+					</div>
+					<div class="content">
+						<div class="studentDetails">
+							<table class="table">
+								<tr id="nameBox">
+									<td>Name:</td>
+									<td>
+										<span class="studentName"></span>
+									</td>
+								</tr>
+								<tr>
+									<td>Department: </td>
+									<td>
+										<span class="studentDepartment"></span>
+									</td>
+								</tr>
+								<tr>
+									<td>Level:</td>
+									<td>
+										<span class="studentLevel"></span>
+									</td>
+								</tr>
+							</table>
+
+						</div>
+						<div class="passport">
+							<img src="" alt="student passport" id="passport">
+						</div>
+					</div>
+				</header>
+
+
+				<div class="firstSem_list">
+					<div class="session">
+						<div class="title">
+							<span class="name">session: <span id="insert_session"></span></span>
+
+						</div>
+						<div class="title_2">1ST semester courses</div>
+					</div>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>course code</th>
+								<th>course title</th>
+								<th>unit</th>
+								<th>semester</th>
+								<th>nature</th>
+							</tr>
+						</thead>
+						<tbody class="listOfCourses_firstSem"></tbody>
+					</table>
+					<div class="total_unit">
+						total credit units: <span class="ttuFirst"></span>
+					</div>
+				</div>
+				<div class="secondSem_list">
+					<div class="session">
+						<div class="title">
+							<span class="year"></span>
+						</div>
+						<div class="title_2">2ND semester courses</div>
+					</div>
+					<table class="table second_table">
+						<thead>
+							<tr>
+								<th>course code</th>
+								<th>course title</th>
+								<th>unit</th>
+								<th>semester</th>
+								<th>nature</th>
+							</tr>
+						</thead>
+						<tbody class="listOfCourses_secondSem"></tbody>
+					</table>
+					<div class="total_unit">
+						total credit units: <span class="ttuSecond"></span>
+					</div>
+				</div>
+				<div class="validation">
+					<div class="box">
+						<input type="checkbox" name="" id="la">
+						<label for="la" class="name">Level Adviser</label>
+					</div>
+					<div class="box">
+						<input type="checkbox" name="" id="checkbox">
+						<label for="checkbox" class="name">HOD</label>
+					</div>
+					<div class="box">
+						<input type="checkbox" name="" id="dean">
+						<label for="dean" class="name">Dean</label>
+					</div>
+					<div class="box">
+						<input type="checkbox" name="" id="registrar">
+						<label for="registrar" class="name">Registrar</label>
+					</div>
+				</div>
+
+				<div class="printBtn">
+					<button type="button" id="home">home page</button>
+					<button type="button" id="printBtn">print</button>
+				</div>
+			</div>
+
+			<div class="container">
+				<nav class="nav">
+					<div class="title">Register course</div>
+					<div class="path">
+						<span class="root">
+							<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+								<path d="M0 0h24v24H0z" fill="none"/>
+								<path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/>
+							</svg>
+						</span>
+						<span>/</span>
+						<span class="course_reg">course reg.</span>
+					</div>
+				</nav>
+
+				<div class="register-box">
+					<div class="content">
+						<div class="head">
+							<div class="title">select session</div>
+							<div class="icons">
+								<span class="icon caret_down">
+									<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg>
+								</span>
+								<span class="icon close">
+									<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+								</span>
+							</div>
+						</div>
+						<div class="body">
+							<div class="select_session">
+								<span class="name">session:</span>
+								<select name="" id="session">
+									<option value="2023/2024">2023/2024</option>
+									<option value="2022/2023">2022/2023</option>
+								</select>
+								<button class="submit">submit</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="course_list">
+						<div class="title">
+							<span class="name">session: <span id="insert_session"></span></span>
+						</div>
+						<div class="title_2">semester courses</div>
+						<table class="courses">
+							<thead>
+								<tr>
+									<th>mark</th>
+									<th>course code</th>
+									<th>course title</th>
+									<th>unit</th>
+									<th>semester</th>
+									<th>nature</th>
+								</tr>
+							</thead>
+							<tbody class="list_tbody">
+								<tr class="first_course">
+									<td>
+										<input type="checkbox" id="cpt316">
+									</td>
+									<td>CPT316</td>
+									<td>System Analysis and Design</td>
+									<td id="credit_unit">3</td>
+									<td>1ST</td>
+									<td>Core</td>
+								</tr>
+								<tr class="second_course">
+									<td>
+										<input type="checkbox" id="css325">
+									</td>
+									<td>CSS325</td>
+									<td>Ethical Hacking and Countermeasures</td>
+									<td id="credit_unit">3</td>
+									<td>2ND</td>
+									<td>Core</td>
+								</tr>
+								<tr class="first_course">
+									<td>
+										<input type="checkbox" id="css315">
+									</td>
+									<td>CSS315</td>
+									<td>System Security</td>
+									<td id="credit_unit">2</td>
+									<td>1ST</td>
+									<td>Core</td>
+								</tr>
+								<tr class="second_course">
+									<td>
+										<input type="checkbox" id="css321">
+									</td>
+									<td>CSS321</td>
+									<td>Enterprise and Perimeter Security</td>
+									<td id="credit_unit">2</td>
+									<td>2ND</td>
+									<td>Core</td>
+								</tr>
+								<tr class="first_course">
+									<td>
+										<input type="checkbox" id="css316">
+									</td>
+									<td>CSS316</td>
+									<td>Computer Organization and Architecture</td>
+									<td id="credit_unit">3</td>
+									<td>1ST</td>
+									<td>Core</td>
+								</tr>
+								<tr class="second_course">
+									<td>
+										<input type="checkbox" id="css322">
+									</td>
+									<td>CSS322</td>
+									<td>Forensic Analysis</td>
+									<td id="credit_unit">2</td>
+									<td>2ND</td>
+									<td>Core</td>
+								</tr>
+								<tr class="first_course">
+									<td>
+										<input type="checkbox" id="css311">
+									</td>
+									<td>CSS311</td>
+									<td>Software Defined Networks</td>
+									<td id="credit_unit">2</td>
+									<td>1ST</td>
+									<td>Core</td>
+								</tr>
+								<tr class="second_course">
+									<td>
+										<input type="checkbox" id="css323">
+									</td>
+									<td>CSS323</td>
+									<td>Threats Exploits and Countermeasures</td>
+									<td id="credit_unit">2</td>
+									<td>2ND</td>
+									<td>Core</td>
+								</tr>
+								<tr class="first_course">
+									<td>
+										<input type="checkbox" id="css312">
+									</td>
+									<td>CSS312</td>
+									<td>Cryptographic Techniques</td>
+									<td id="credit_unit">2</td>
+									<td>1ST</td>
+									<td>Core</td>
+								</tr>
+								<tr class="second_course">
+									<td>
+										<input type="checkbox" id="cpt326">
+									</td>
+									<td>CPT326</td>
+									<td>Computer and Network Security</td>
+									<td id="credit_unit">2</td>
+									<td>2ND</td>
+									<td>Core</td>
+								</tr>
+								<tr class="first_course">
+									<td>
+										<input type="checkbox" id="cpt315">
+									</td>
+									<td>CPT315</td>
+									<td>Algorithms and Complexity Analysis</td>
+									<td id="credit_unit">3</td>
+									<td>1ST</td>
+									<td>Core</td>
+								</tr>
+								<tr class="second_course">
+									<td>
+										<input type="checkbox" id="css324">
+									</td>
+									<td>CSS324</td>
+									<td>Web Hacking</td>
+									<td id="credit_unit">3</td>
+									<td>2ND</td>
+									<td>Core</td>
+								</tr>
+								<tr class="first_course">
+									<td>
+										<input type="checkbox" id="gst308">
+									</td>
+									<td>GST308</td>
+									<td>Entrepreneurship II</td>
+									<td id="credit_unit">3</td>
+									<td>1ST</td>
+									<td>Core</td>
+								</tr>
+								<tr class="second_course">
+									<td>
+										<input type="checkbox" id="cpt321">
+									</td>
+									<td>CPT321</td>
+									<td>Computational Science and Numerical Methods</td>
+									<td id="credit_unit">3</td>
+									<td>2ND</td>
+									<td>Core</td>
+								</tr>
+								<tr class="first_course">
+									<td>
+										<input type="checkbox" id="gst208">
+									</td>
+									<td>GST208</td>
+									<td>Entrepreneurship I</td>
+									<td id="credit_unit">2</td>
+									<td>1ST</td>
+									<td>Core</td>
+								</tr>
+								<tr class="second_course">
+									<td>
+										<input type="checkbox" id="css328">
+									</td>
+									<td>CSS328</td>
+									<td>Biometrics Security</td>
+									<td id="credit_unit">2</td>
+									<td>2ND</td>
+									<td>Core</td>
+								</tr>
+								<tr class="second_course">
+									<td>
+										<input type="checkbox" id="cpt224">
+									</td>
+									<td>CPT224</td>
+									<td>Web Application Development</td>
+									<td id="credit_unit">2</td>
+									<td>2ND</td>
+									<td>Core</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+
+	<script src="js/course_reg.js"></script>
+	</body>
+	</html>

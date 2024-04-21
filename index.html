@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Course Registration Application</title>
+
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div class="container">
+		<nav class="nav">
+			<div class="bar">
+				<svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+			</div>
+		</nav>
+
+		<div class="payment-box">
+			<div class="title">payment form</div>
+			<form class="payment-form">
+				<div class="first_page" id="first_page">
+					<label for="img" class="img">
+						<img src="" class="newImg">
+						<input type="file" id="img" accept="image/jpeg, image/jpg, image/png">
+						<span class="text upload_text">
+							<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><path d="M18,15v3H6v-3H4v3c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2v-3H18z M7,9l1.41,1.41L11,7.83V16h2V7.83l2.59,2.58L17,9l-5-5L7,9z"/></g></svg>
+							upload img
+						</span>
+					</label>
+					<div class="content">
+						<div class="box firstname">
+							<input type="text" id="first_input" required>
+							<label for="first_input" id="label">first name</label>
+						</div>
+						<div class="box lastname">
+							<input type="text" id="last_input" required>
+							<label for="last_input" id="label">last name</label>
+						</div>
+						<div class="box school_box school">
+							<span class="name">faculty</span>
+							<select name="faculty" id="faculty">
+								<option value="SICT">SICT</option>
+							</select>
+						</div>
+						<div class="box school_box dpt">
+							<span class="name">department</span>
+							<select name="department" id="department">
+								<option value="Computer Science">Computer Science</option>
+								<option value="Cyber Security Science">Cyber Security Science</option>
+							</select>
+						</div>
+						<div class="box school_box dpt">
+							<span class="name">level</span>
+							<select name="level" id="level">
+								<option value="100">100</option>
+								<option value="200">200</option>
+								<option value="300">300</option>
+								<option value="400">400</option>
+								<option value="500">500</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="btn-box">
+						<button class="first-page-btn">
+							<a href="#second_page">
+								<span class="text">continue</span>
+								<svg class="svg" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
+							</a>
+						</button>
+					</div>
+				</div>
+
+				<!-- second page -->
+				<div class="second_page" id="second_page">
+					<div class="content">
+						<div class="box email">
+							<input type="email" id="email" required>
+							<label for="email" id="label">email</label>
+						</div>
+						<div class="box phone-number">
+							<input type="number" min="1" maxlength="11" id="phone-number" required>
+							<label for="phone-number" id="label">phone number</label>
+						</div>
+						<div class="box money">
+							<span class="naira">
+								<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" width="20" height="20" viewBox="0 0 115.09 122.88">
+									<title>nigeria-naira</title>
+									<path fill="aliceblue" d="M13.42,0H32.1a1.25,1.25,0,0,1,1,.6L58,42.26H83.17v-41A1.23,1.23,0,0,1,84.39,0h17.28a1.23,1.23,0,0,1,1.23,1.23v41h11a1.23,1.23,0,0,1,1.23,1.23V54.55a1.23,1.23,0,0,1-1.23,1.23h-11v9.41h11a1.23,1.23,0,0,1,1.23,1.22V77.48a1.23,1.23,0,0,1-1.23,1.22h-11v43a1.23,1.23,0,0,1-1.23,1.23H84.39a1.25,1.25,0,0,1-1-.6L58,78.7H33.26v43A1.23,1.23,0,0,1,32,122.88H13.42a1.23,1.23,0,0,1-1.23-1.23V78.7h-11A1.23,1.23,0,0,1,0,77.48V66.41a1.23,1.23,0,0,1,1.23-1.22h11V55.78h-11A1.23,1.23,0,0,1,0,54.55V43.49a1.23,1.23,0,0,1,1.23-1.23h11v-41A1.23,1.23,0,0,1,13.42,0ZM33.26,55.78v9.41h17l-4.4-9.41ZM70,65.19H83.17V55.78H65.68L70,65.19ZM83.17,78.7H77.88l5.29,11v-11ZM33.26,32.76v9.5h4.57l-4.57-9.5Z"/>
+								</svg>
+							</span>
+							<input type="text" placeholder="Amount to be payed" required id="money">
+							<span class="naira">
+								: 00K
+							</span>
+							<!-- <label for="money" id="label">amount to be payed</label> -->
+						</div>
+
+					</div>
+
+					<div class="loading">
+						<div class="load">
+							<div class="loader"></div>
+							<div class="text">please wait..</div>
+						</div>
+						<div class="verified">
+							<div class="payed">
+								<!-- <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="150" viewBox="0 0 24 24" width="150"><g><rect fill="none" height="24" width="24"/></g><g><path d="M23,12l-2.44-2.79l0.34-3.69l-3.61-0.82L15.4,1.5L12,2.96L8.6,1.5L6.71,4.69L3.1,5.5L3.44,9.2L1,12l2.44,2.79l-0.34,3.7 l3.61,0.82L8.6,22.5l3.4-1.47l3.4,1.46l1.89-3.19l3.61-0.82l-0.34-3.69L23,12z M10.09,16.72l-3.8-3.81l1.48-1.48l2.32,2.33 l5.85-5.87l1.48,1.48L10.09,16.72z"/></g></svg> -->
+								<svg xmlns="http://www.w3.org/2000/svg" height="150" viewBox="0 0 24 24" width="150"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+
+							</div>
+							<div class="text">Payment successful</div>
+						</div>
+					</div>
+
+					<div class="btn-box">
+						<button class="second-page-btn">
+							<a href="#first_page">
+								<svg class="svg" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+								<span class="text">back</span>
+							</a>
+						</button>
+						<button class="pay-btn" type="button">
+							<span class="text">pay</span>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script src="js/index.js"></script>
+</body>
+</html>
